@@ -1,0 +1,98 @@
+/* Basic Setup */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #4c6a8a; /* Background color */
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+/* Container */
+.container {
+    position: relative;
+    text-align: center;
+}
+
+/* Gift Box */
+.gift {
+    width: 300px; /* Bigger size */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gift:hover {
+    transform: scale(1.1);
+}
+
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Heart */
+#heart-container {
+    position: relative;
+}
+
+#heart {
+    width: 200px; /* Bigger heart */
+    animation: beat-three-times 1.8s ease-in-out forwards;
+}
+
+/* Heart Beat Animation */
+@keyframes beat-three-times {
+    0%, 100% { transform: scale(1); }
+    25%, 75% { transform: scale(1.2); }
+    50% { transform: scale(1); }
+}
+
+/* Password Popup */
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #788ca1; /* Updated popup color */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.popup input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+/* Button Styling */
+.popup button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #7c8b9c; /* Updated button color */
+    border: none;
+    color: rgb(16, 7, 50);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.popup button:hover {
+    background-color: #6b7a8c; /* Darker hover effect */
+}
+
+
+/* Letter Reveal */
+#letter {
+    width: 400px; /* Slightly increased letter size */
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
